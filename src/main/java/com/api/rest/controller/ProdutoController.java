@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.api.rest.entidade.Produto;
 import com.api.rest.entidade.dto.ProdutoDTO;
-import com.api.rest.produtoRest.service.ProdutoService;
+import com.api.rest.service.ProdutoService;
 import com.crud.framework.controller.GenericController;
 
 
