@@ -1,4 +1,4 @@
-package com.api.rest.produtoRest.service;
+package com.api.rest.service;
 
 import com.api.rest.entidade.Pessoa;
 import com.api.rest.entidade.dto.PessoaDTO;

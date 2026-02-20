@@ -1,11 +1,11 @@
-package com.api.rest.produtoRest.service.impl;
+package com.api.rest.service.impl;
 
 import org.springframework.stereotype.Service;
 
 import com.api.rest.entidade.Produto;
 import com.api.rest.entidade.dto.ProdutoDTO;
-import com.api.rest.produtoRest.service.ProdutoService;
 import com.api.rest.repository.ProdutoRepository;
+import com.api.rest.service.ProdutoService;
 import com.crud.framework.config.GenericMapper;
 import com.crud.framework.service.impl.GenericServiceImpl;
 
