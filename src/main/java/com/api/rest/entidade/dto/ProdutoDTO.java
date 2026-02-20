@@ -1,4 +1,4 @@
-package com.api.produtoRest.entidade.dto;
+package com.api.rest.entidade.dto;
 
 import java.io.Serializable;
 

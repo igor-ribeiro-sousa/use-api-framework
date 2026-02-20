@@ -1,7 +1,7 @@
-package com.api.produtoRest.service;
+package com.api.rest.produtoRest.service;
 
-import com.api.produtoRest.entidade.Produto;
-import com.api.produtoRest.entidade.dto.ProdutoDTO;
+import com.api.rest.entidade.Produto;
+import com.api.rest.entidade.dto.ProdutoDTO;
 import com.crud.framework.service.GenericService;
 
 public interface ProdutoService extends GenericService<Produto, ProdutoDTO, Long> {
