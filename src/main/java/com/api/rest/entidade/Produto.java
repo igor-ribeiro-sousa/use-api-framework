@@ -1,4 +1,4 @@
-package com.api.produtoRest.entidade;
+package com.api.rest.entidade;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

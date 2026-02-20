@@ -1,6 +1,6 @@
-package com.api.produtoRest.repository;
+package com.api.rest.repository;
 
-import com.api.produtoRest.entidade.Produto;
+import com.api.rest.entidade.Produto;
 import com.crud.framework.repository.GenericRepository;
 
 public interface ProdutoRepository extends GenericRepository<Produto, Long> {}
