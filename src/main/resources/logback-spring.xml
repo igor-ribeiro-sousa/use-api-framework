@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <property name="LOG_PATH" value="logs"/>
+  <property name="APP_NAME" value="log-aplicacao-completa"/>
+
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{40} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Arquivo principal: Grava todos os logs da aplicação -->
+  <appender name="APP_FILE" class="ch.qos.logback.core.FileAppender">
+    <file>${LOG_PATH}/${APP_NAME}.log</file>
+    <append>true</append>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{40} - %msg%n%ex</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Arquivo só de ERROR (da aplicação inteira) -->
+  <appender name="ERROR_ONLY_FILE" class="ch.qos.logback.core.FileAppender">
+    <file>${LOG_PATH}/framework-exceptions.log</file>
+    <append>true</append>
+
+    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+      <level>ERROR</level>
+      <onMatch>ACCEPT</onMatch>
+      <onMismatch>DENY</onMismatch>
+    </filter>
+
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger - %msg%n%ex</pattern>
+    </encoder>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="CONSOLE"/>
+    <appender-ref ref="APP_FILE"/>
+    <appender-ref ref="ERROR_ONLY_FILE"/>
+  </root>
+
+</configuration>
